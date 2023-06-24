@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import "../styles/LayoutStyles.css";
 import Layout from "./../components/Layout";
 import { Row } from "antd";
 import DoctorList from "../components/DoctorList";
@@ -30,6 +31,7 @@ const HomePage = () => {
   }, []);
   return (
     <Layout>
+      <br></br>
       <h1 className="text-center">Doctors</h1>
       <Row>
         {doctors && doctors.map((doctor) => <DoctorList doctor={doctor} />)}

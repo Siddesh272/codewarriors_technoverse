@@ -47,7 +47,7 @@ const Register = () => {
           <Link to="/login" className="m-2">
             Already user login here
           </Link>
-          <button className="btn btn-primary" type="submit">
+          <button className="btn btn2 btn-light" type="submit">
             Register
           </button>
         </Form>

@@ -126,6 +126,7 @@ const BookingPage = () => {
   }, []);
   return (
     <Layout>
+      <br></br>
       <h3 style={{ textAlign: 'center' }}>Booking Page</h3>
 <div style={{ display: 'flex', justifyContent: 'center' }}>
   {doctors && (
@@ -137,7 +138,7 @@ const BookingPage = () => {
       <h4 style={{ textAlign: 'center' }}>
         Timings: {doctors.timings && doctors.timings[0]} - {doctors.timings && doctors.timings[1]}
       </h4>
-      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', width: '100%' }}>
+      <div >
         <DatePicker
           aria-required="true"
           style={{ margin: '0.5rem' }}
@@ -154,23 +155,23 @@ const BookingPage = () => {
             setTime(moment(value).format('HH:mm'));
           }}
         />
-          <input  className="m-2 discount" type="text" id="discount_code1" name="" placeholder="Enter the discount code " ></input>
+          <input style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', width: '100%' }} className="m-2 discount" type="text" id="discount_code1" name="" placeholder="Enter the discount code " ></input>
 
               <button
-                className="btn btn-primary mt-2"
+                className="btn btn-light mt-2"
                 onClick={appCou}
               >
                 apply coupon
-              </button>
+              </button><br></br>
 
               <button
-                className="btn btn-primary mt-2"
+                className="btn btn-light mt-2"
                 onClick={handleAvailability}
               >
                 Check Availability
-              </button>
+              </button><br></br>
 
-              <button className="btn btn-dark mt-2" onClick={handleBooking}>
+              <button className="btn btn2 btn-dark mt-2" onClick={handleBooking}>
                 Book Now
               </button>
             </div>
