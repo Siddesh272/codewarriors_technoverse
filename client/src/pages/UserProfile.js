@@ -133,3 +133,5 @@ const UserProfile = () => {
     </Layout>
   );
 };
+
+export default UserProfile;
