@@ -94,3 +94,8 @@
     margin: 0 10px;
     text-transform: uppercase;
   }
+
+  img {
+    width: 78rem;
+    height: auto;
+  }

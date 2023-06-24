@@ -4,6 +4,25 @@ const jwt = require("jsonwebtoken");
 const doctorModel = require("../models/doctorModel");
 const appointmentModel = require("../models/appointmentModel");
 const moment = require("moment");
+
+const getUserInfoController = async (req, res) => {
+  try {
+    const user = await userModel.findOne({ _id: req.body._id });
+    res.status(200).send({
+      success: true,
+      message: "user data fetch success",
+      data: user,
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).send({
+      success: false,
+      error,
+      message: "Error in Fetching Doctor Details",
+    });
+  }
+};
+
 //register callback
 const registerController = async (req, res) => {
   try {
@@ -290,6 +309,7 @@ const rateController = async (req, res) => {
 };
 
 module.exports = {
+  getUserInfoController,
   loginController,
   registerController,
   authController,
