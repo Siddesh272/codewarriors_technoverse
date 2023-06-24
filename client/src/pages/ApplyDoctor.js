@@ -149,7 +149,7 @@ const ApplyDoctor = () => {
        
         </Row>
         <Col xs={24} md={24} lg={8}>
-            <button style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center',alignContent:'center', width: '40%' }} className="btn btn2 btn-dark form-btn" type="submit">
+            <button style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', marginLeft:'550px' , width: '40%' }} className="btn btn2 btn-dark form-btn" type="submit">
               Submit
             </button>
           </Col>

@@ -48,7 +48,7 @@ const Login = () => {
         <Link to="/register" className="m-2">
           Not a user Register here
         </Link>
-        <button className="btn btn2 btn-light" type="submit">
+        <button  style={{ display: 'flex', flexDirection: 'column', justifyContent:'center', marginLeft:'2px', width: '100%' }} className="btn btn2 btn-dark" type="submit">
           Login
         </button>
       </Form>

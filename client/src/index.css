@@ -30,6 +30,29 @@ label{
   border: 1px solid rgba(128, 128, 128, 0.521) !important;
   height: 40px !important;
 }
+
+.page-title{
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.833);
+    font-weight: bold;
+    font-family: 'Libre Baskerville', serif;
+  }
+  .card-title{
+    font-size: 22px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.627);
+    font-family: 'Libre Baskerville', serif;
+  
+  }
+  .normal-text{
+    font-size: 1rem;
+    font-family: 'Libre Baskerville', serif;
+  }
+  .card{
+    box-shadow: 0 0 2px rgb(189, 188, 188);
+    border-radius: 0 !important;
+    font-family: 'Libre Baskerville', serif;
+  }
 /* Common styling */
 
 .spinner-parent{

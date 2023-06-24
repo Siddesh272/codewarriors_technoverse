@@ -16,6 +16,7 @@ import BookingPage from "./pages/BookingPage";
 import Appointments from "./pages/Appointments";
 import DoctorAppointments from "./pages/doctor/DoctorAppointments";
 import Rating from "./pages/Rating";
+import "../styles/LayoutStyles.css";
 function App() {
   const { loading } = useSelector((state) => state.alerts);
   return (

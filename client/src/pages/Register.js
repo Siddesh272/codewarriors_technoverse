@@ -44,10 +44,10 @@ const Register = () => {
           <Form.Item label="Password" name="password">
             <Input type="password" required />
           </Form.Item>
-          <Link to="/login" className="m-2">
+          <Link to="/login" className="m">
             Already user login here
           </Link>
-          <button className="btn btn2 btn-light" type="submit">
+          <button  style={{ display: 'flex', flexDirection: 'column', justifyContent:'center', marginLeft:'2px', width: '100%' }}className="btn btn2 btn-dark" type="submit">
             Register
           </button>
         </Form>
