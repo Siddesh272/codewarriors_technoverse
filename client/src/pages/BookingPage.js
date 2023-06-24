@@ -100,50 +100,47 @@ const BookingPage = () => {
   }, []);
   return (
     <Layout>
-      <h3>Booking Page</h3>
-      <div className="container m-2">
-        {doctors && (
-          <div>
-            <h4>
-              Dr.{doctors.firstName} {doctors.lastName}
-            </h4>
-            <h4>Fees : {doctors.feesPerCunsaltation}</h4>
-            <h4>
-              Timings : {doctors.timings && doctors.timings[0]} -{" "}
-              {doctors.timings && doctors.timings[1]}{" "}
-            </h4>
-            <div className="d-flex flex-column w-50">
-              <DatePicker
-                aria-required={"true"}
-                className="m-2"
-                format="DD-MM-YYYY"
-                onChange={(value) => {
-                  setDate(moment(value).format("DD-MM-YYYY"));
-                }}
-              />
-              <TimePicker
-                aria-required={"true"}
-                format="HH:mm"
-                className="mt-3"
-                onChange={(value) => {
-                  setTime(moment(value).format("HH:mm"));
-                }}
-              />
+      <h3 style={{ textAlign: 'center' }}>Booking Page</h3>
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+  {doctors && (
+    <div>
+      <h4 style={{ textAlign: 'center' ,marginTop:"50px"}}>
+        Dr. {doctors.firstName} {doctors.lastName}
+      </h4>
+      <h4 style={{ textAlign: 'center' }}>Fees: {doctors.feesPerCunsaltation}</h4>
+      <h4 style={{ textAlign: 'center' }}>
+        Timings: {doctors.timings && doctors.timings[0]} - {doctors.timings && doctors.timings[1]}
+      </h4>
+      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', width: '100%' }}>
+        <DatePicker
+          aria-required="true"
+          style={{ margin: '0.5rem' }}
+          format="DD-MM-YYYY"
+          onChange={(value) => {
+            setDate(moment(value).format('DD-MM-YYYY'));
+          }}
+        />
+        <TimePicker
+          aria-required="true"
+          format="HH:mm"
+          style={{ marginTop: '1rem' }}
+          onChange={(value) => {
+            setTime(moment(value).format('HH:mm'));
+          }}
+        />
 
-              <button
-                className="btn btn-primary mt-2"
-                onClick={handleAvailability}
-              >
-                Check Availability
-              </button>
+        <button className="btn btn-primary mt-2" onClick={handleAvailability}>
+          Check Availability
+        </button>
 
-              <button className="btn btn-dark mt-2" onClick={handleBooking}>
-                Book Now
-              </button>
-            </div>
-          </div>
-        )}
+        <button className="btn btn-dark mt-2" onClick={handleBooking}>
+          Book Now
+        </button>
       </div>
+    </div>
+  )}
+</div>
+
     </Layout>
   );
 };
