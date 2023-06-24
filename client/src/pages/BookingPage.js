@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "../styles/LayoutStyles.css";
 import Layout from "../components/Layout";
 import { useParams } from "react-router-dom";
 import axios from "axios";
@@ -6,6 +7,7 @@ import { DatePicker, message, TimePicker } from "antd";
 import moment from "moment";
 import { useDispatch, useSelector } from "react-redux";
 import { showLoading, hideLoading } from "../redux/features/alertSlice";
+import ApplyDoctor from './ApplyDoctor';
 
 const BookingPage = () => {
   const { user } = useSelector((state) => state.user);
@@ -58,6 +60,30 @@ const BookingPage = () => {
     } catch (error) {
       dispatch(hideLoading());
       console.log(error);
+    }
+  };
+
+  const appCou = async() =>{
+    const couponInput = document.getElementById("discount_code1");
+    const couponCode = couponInput.value;
+    console.log(couponCode);
+    if (couponCode === "hello") {
+      
+      // {doctors.feesPerCunsaltation}
+      if(doctors.feesPerCunsaltation>=200){
+      const discount = 0.1; // 10% discount
+      const discountedTotal = doctors.feesPerCunsaltation - (doctors.feesPerCunsaltation * discount);
+
+  
+      alert("Discounted Total: RS" + discountedTotal);
+      }else{
+        alert("This coupon is valid above 200 rs only");
+      }
+      
+
+  
+    } else {
+      alert("Invalid coupon code");
     }
   };
   // =============== booking func
@@ -128,19 +154,29 @@ const BookingPage = () => {
             setTime(moment(value).format('HH:mm'));
           }}
         />
+          <input  className="m-2 discount" type="text" id="discount_code1" name="" placeholder="Enter the discount code " ></input>
 
-        <button className="btn btn-primary mt-2" onClick={handleAvailability}>
-          Check Availability
-        </button>
+              <button
+                className="btn btn-primary mt-2"
+                onClick={appCou}
+              >
+                apply coupon
+              </button>
 
-        <button className="btn btn-dark mt-2" onClick={handleBooking}>
-          Book Now
-        </button>
+              <button
+                className="btn btn-primary mt-2"
+                onClick={handleAvailability}
+              >
+                Check Availability
+              </button>
+
+              <button className="btn btn-dark mt-2" onClick={handleBooking}>
+                Book Now
+              </button>
+            </div>
+          </div>
+        )}
       </div>
-    </div>
-  )}
-</div>
-
     </Layout>
   );
 };
