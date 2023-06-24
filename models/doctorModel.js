@@ -48,6 +48,18 @@ const doctorSchema = new mongoose.Schema(
       type: Object,
       required: [true, "wrok timing is required"],
     },
+    score: {
+      type: Number,
+      default: 0
+    },
+    rating: {
+      type: Number,
+      default: 0
+    },
+    reviews: {
+      type: Number,
+      default: 0
+    }
   },
   { timestamps: true }
 );

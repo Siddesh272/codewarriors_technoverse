@@ -3,7 +3,7 @@ import HomePage from "./pages/HomePage";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import { useSelector } from "react-redux";
-import Spinner from "./components/Spinner"; 
+import Spinner from "./components/Spinner";
 import ProtectedRoute from "./components/ProtectedRoute";
 import PublicRoute from "./components/PublicRoute";
 import ApplyDoctor from "./pages/ApplyDoctor";
@@ -14,6 +14,7 @@ import Profile from "./pages/doctor/Profile";
 import BookingPage from "./pages/BookingPage";
 import Appointments from "./pages/Appointments";
 import DoctorAppointments from "./pages/doctor/DoctorAppointments";
+import Rating from "./pages/Rating";
 function App() {
   const { loading } = useSelector((state) => state.alerts);
   return (
@@ -60,6 +61,14 @@ function App() {
               element={
                 <ProtectedRoute>
                   <BookingPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/doctor/rate"
+              element={
+                <ProtectedRoute>
+                  <Rating />
                 </ProtectedRoute>
               }
             />

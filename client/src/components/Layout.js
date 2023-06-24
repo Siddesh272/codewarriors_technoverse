@@ -64,6 +64,10 @@ const Layout = ({ children }) => {
                   </>
                 );
               })}
+              <div className={`menu-item `}>
+                <i className="fa-solid fa-star"></i>
+                <Link to="/doctor/rate">Ratings</Link>
+              </div>
               <div className={`menu-item `} onClick={handleLogout}>
                 <i className="fa-solid fa-right-from-bracket"></i>
                 <Link to="/login">Logout</Link>

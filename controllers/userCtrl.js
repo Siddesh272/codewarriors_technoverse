@@ -264,6 +264,31 @@ const userAppointmentsController = async (req, res) => {
   }
 };
 
+const rateController = async (req, res) => {
+  try {
+    let { doctorId, score, reviews } = req.body;
+    reviews += 1;
+    const doctor = await doctorModel.findOne({ _id: doctorId });
+    await doctorModel.findByIdAndUpdate(doctorId, { reviews });
+    await doctorModel.findByIdAndUpdate(doctorId, { score });
+    rating = score / reviews;
+    const rate = await doctorModel.findByIdAndUpdate(doctorId, { rating });
+
+    res.status(201).send({
+      success: true,
+      message: "Account Rating Updated",
+      data: doctor,
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).send({
+      success: false,
+      message: "Eror in Account Rating",
+      error,
+    });
+  }
+};
+
 module.exports = {
   loginController,
   registerController,
@@ -275,4 +300,5 @@ module.exports = {
   bookeAppointmnetController,
   bookingAvailabilityController,
   userAppointmentsController,
+  rateController
 };

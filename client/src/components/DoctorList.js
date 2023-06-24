@@ -3,6 +3,10 @@ import { useNavigate } from "react-router-dom";
 
 const DoctorList = ({ doctor }) => {
   const navigate = useNavigate();
+  let stars = "";
+  for(let i = 0; i < doctor.rating; i++) {
+    stars += "★";
+  }
   return (
     <>
       <div
@@ -21,10 +25,13 @@ const DoctorList = ({ doctor }) => {
             <b>Experience</b> {doctor.experience}
           </p>
           <p>
-            <b>Fees Per Cunsaltation</b> {doctor.feesPerCunsaltation}
+            <b>Fees Per Consultation</b> {doctor.feesPerCunsaltation}
           </p>
           <p>
             <b>Timings</b> {doctor.timings[0]} - {doctor.timings[1]}
+          </p>
+          <p>
+            <b>Rating</b> { stars }
           </p>
         </div>
       </div>
