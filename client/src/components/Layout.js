@@ -1,10 +1,10 @@
 import React from "react";
 import "../styles/LayoutStyles.css";
 import { adminMenu, userMenu } from "./../Data/data";
-
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { Badge, message } from "antd";
+
 const Layout = ({ children }) => {
   const { user } = useSelector((state) => state.user);
   const location = useLocation();
@@ -52,6 +52,7 @@ const Layout = ({ children }) => {
               <h6 className="text-light">Doc Connect</h6>
               <hr />
             </div>
+            
             <div className="menu">
               {SidebarMenu.map((menu) => {
                 const isActive = location.pathname === menu.path;
@@ -89,6 +90,7 @@ const Layout = ({ children }) => {
                 <Link to="/profile">{user?.name}</Link>
               </div>
             </div>
+            <img src="/discount.png" alt="discount"></img>
             <div className="body">{children}</div>
           </div>
         </div>

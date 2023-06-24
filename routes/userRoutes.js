@@ -1,5 +1,6 @@
 const express = require("express");
 const {
+  getUserInfoController,
   loginController,
   registerController,
   authController,
@@ -23,6 +24,8 @@ router.post("/login", loginController);
 
 //REGISTER || POST
 router.post("/register", registerController);
+
+router.post("/getUserInfo", authMiddleware, getUserInfoController);
 
 //Auth || POST
 router.post("/getUserData", authMiddleware, authController);

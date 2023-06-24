@@ -96,6 +96,7 @@
     text-transform: uppercase;
   }
 
+<<<<<<< HEAD
   @media screen and (max-width: 768px){
   
     .menu{
@@ -103,3 +104,9 @@
     }
     
 }
+=======
+  img {
+    width: 78rem;
+    height: auto;
+  }
+>>>>>>> bf74eb156c64f36ca9c221896ff7bbaa694722be
