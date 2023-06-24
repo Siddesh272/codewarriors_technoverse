@@ -19,11 +19,7 @@ export const SidebarMenu = [
     path: "/profile",
     icon: "fa-solid fa-user",
   },
-  {
-    name: "Logout",
-    path: "/logout",
-    icon: "fa-solid fa-right-from-bracket",
-  },
+ 
 ];
 
 // admin menu
