@@ -81,7 +81,7 @@ const BookingPage = () => {
       if(doctors.feesPerCunsaltation>=200){
       const discount = 0.1; // 10% discount
       const discountedTotal = doctors.feesPerCunsaltation - (doctors.feesPerCunsaltation * discount);
-      message.success("Discounted Total: RS" + discountedTotal);
+      message.success("Discounted Total: ₹ " + discountedTotal);
       }else{
         message.info("This coupon is valid above 200 rs only");
       }
@@ -138,9 +138,9 @@ const BookingPage = () => {
         Dr. {doctors.firstName} {doctors.lastName}
       </h4>
       <h4 style={{ textAlign: 'center' }}>Fees: {doctors.feesPerCunsaltation}</h4>
-      <h4 style={{ textAlign: 'center' }}>
+      {/* <h4 style={{ textAlign: 'center' }}>
         Timings: {doctors.timings && doctors.timings[0]} - {doctors.timings && doctors.timings[1]}
-      </h4>
+      </h4> */}
       <div >
         <DatePicker
           aria-required="true"
