@@ -7,8 +7,18 @@ import { DatePicker, message, TimePicker } from "antd";
 import moment from "moment";
 import { useDispatch, useSelector } from "react-redux";
 import { showLoading, hideLoading } from "../redux/features/alertSlice";
+import Modal from "react-modal";
+
 
 const BookingPage = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    setIsOpen(true);
+  }, []);
+
+  const closeModal = () => {
+    setIsOpen(false);}
   const { user } = useSelector((state) => state.user);
   const params = useParams();
   const [doctors, setDoctors] = useState([]);
@@ -170,10 +180,37 @@ const BookingPage = () => {
               className="btn btn2 btn-dark mt-2" onClick={handleBooking}>
                 Book Now
               </button>
+              <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br> 
+     
+      
             </div>
           </div>
         )}
       </div>
+      <Modal
+        isOpen={isOpen}
+        onRequestClose={closeModal}
+        contentLabel="Popup Image"
+        style={{
+          overlay: {
+            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+            zIndex: 9999
+          },
+          content: {
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            border: 'none',
+            background: 'none',
+          }
+        }}
+      >
+        <img src="/discount.png" alt="Popup Image" onClick={closeModal} />
+      </Modal>
     </Layout>
   );
 };
