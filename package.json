@@ -10,6 +10,9 @@
     "client": "npm start --prefix ./client ",
     "dev": "concurrently \"npm start\" \"npm run client\""
   },
+  "engines": {
+    "node": ">=14.20.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SuryaprakashSingh25/codewarriors_technoverse.git"
@@ -30,6 +33,7 @@
     "moment": "^2.29.4",
     "mongoose": "^7.3.1",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.22"
+    "nodemon": "^2.0.22",
+    "react-modal": "^3.16.1"
   }
 }

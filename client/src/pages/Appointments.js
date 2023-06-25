@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import "../styles/LayoutStyles.css";
 import Layout from "./../components/Layout";
 import moment from "moment";
 import { Table } from "antd";
@@ -63,8 +64,21 @@ const Appointments = () => {
 
   return (
     <Layout>
-      <h1>Appoinmtnets Lists</h1>
+      <br />
+      <h1>Appointments Lists</h1>
       <Table columns={columns} dataSource={appointments} />
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br> 
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
     </Layout>
   );
 };

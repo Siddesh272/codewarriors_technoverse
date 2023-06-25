@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/RegisterStyles.css";
 import { Form, Input, message } from "antd";
 import { useDispatch } from "react-redux";
+import "../styles/LayoutStyles.css";
 import { showLoading, hideLoading } from "../redux/features/alertSlice";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -47,7 +48,7 @@ const Login = () => {
         <Link to="/register" className="m-2">
           Not a user Register here
         </Link>
-        <button className="btn btn-primary" type="submit">
+        <button  style={{ display: 'flex', flexDirection: 'column', justifyContent:'center', marginLeft:'2px', width: '100%' }} className="btn btn2 btn-dark" type="submit">
           Login
         </button>
       </Form>

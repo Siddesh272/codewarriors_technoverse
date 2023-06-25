@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Layout from "./../components/Layout";
+import "../styles/LayoutStyles.css";
 import axios from "axios";
 import { message, Table } from "antd";
 
@@ -103,6 +104,7 @@ const Rating = () => {
     <Layout>
       <h1 className="text-center m-3">All Doctors</h1>
       <Table columns={columns} dataSource={doctors} />
+      
     </Layout>
   );
 };
