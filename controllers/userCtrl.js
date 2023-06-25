@@ -23,6 +23,27 @@ const getUserInfoController = async (req, res) => {
   }
 };
 
+const updateUserProfileController = async (req, res) => {
+  try {
+    const user = await userModel.findOneAndUpdate(
+      { _id: req.body._id },
+      req.body
+    );
+    res.status(201).send({
+      success: true,
+      message: "User Profile Updated",
+      data: user,
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).send({
+      success: false,
+      message: "User Profile Update issue",
+      error,
+    });
+  }
+};
+
 //register callback
 const registerController = async (req, res) => {
   try {
@@ -314,6 +335,7 @@ module.exports = {
   registerController,
   authController,
   applyDoctorController,
+  updateUserProfileController,
   getAllNotificationController,
   deleteAllNotificationController,
   getAllDocotrsController,
