@@ -16,10 +16,9 @@ export const SidebarMenu = [
   },
   {
     name: "Profile",
-    path: "/profile",
+    path: "/doctor/profile/${user._id}",
     icon: "fa-solid fa-user",
   },
- 
 ];
 
 // admin menu
@@ -42,7 +41,7 @@ export const adminMenu = [
   },
   {
     name: "Profile",
-    path: "/profile",
+    path: "/doctor/profile/",
     icon: "fa-solid fa-user",
   },
 ];
@@ -64,7 +63,7 @@ export const userMenu = [
   },
   {
     name: "Profile",
-    path: "/user/profile",
+    path: "/doctor/profile/${user._id}",
     icon: "fa-solid fa-user",
   },
 ];

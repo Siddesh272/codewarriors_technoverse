@@ -123,11 +123,11 @@ const UserProfile = () => {
               </Form.Item>
             </Col>
           </Row>
-            <Col xs={24} md={24} lg={8}>
-              <button className="btn btn-primary form-btn" type="submit">
-                Update
-              </button>
-            </Col>
+          <Col xs={24} md={24} lg={8}>
+            <button className="btn btn-primary form-btn" type="submit">
+              Update
+            </button>
+          </Col>
         </Form>
       )}
     </Layout>

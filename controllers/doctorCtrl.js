@@ -26,11 +26,18 @@ const updateProfileController = async (req, res) => {
       { userId: req.body.userId },
       req.body
     );
-    res.status(201).send({
-      success: true,
-      message: "Doctor Profile Updated",
-      data: doctor,
-    });
+    if (doctor) {
+      res.status(201).send({
+        success: true,
+        message: "Doctor Profile Updated",
+        data: doctor,
+      });
+    } else {
+      res.status(400).send({
+        success: false,
+        message: "No Doctor",
+      });
+    }
   } catch (error) {
     console.log(error);
     res.status(500).send({

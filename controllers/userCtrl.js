@@ -8,11 +8,13 @@ const moment = require("moment");
 const getUserInfoController = async (req, res) => {
   try {
     const user = await userModel.findOne({ _id: req.body._id });
-    res.status(200).send({
-      success: true,
-      message: "user data fetch success",
-      data: user,
-    });
+    if (!user?.isDoctor) {
+      res.status(200).send({
+        success: true,
+        message: "user data fetch success",
+        data: user,
+      });
+    }
   } catch (error) {
     console.log(error);
     res.status(500).send({
@@ -320,5 +322,5 @@ module.exports = {
   bookeAppointmnetController,
   bookingAvailabilityController,
   userAppointmentsController,
-  rateController
+  rateController,
 };
