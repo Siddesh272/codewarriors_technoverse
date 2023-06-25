@@ -7,7 +7,6 @@ import { DatePicker, message, TimePicker } from "antd";
 import moment from "moment";
 import { useDispatch, useSelector } from "react-redux";
 import { showLoading, hideLoading } from "../redux/features/alertSlice";
-import ApplyDoctor from './ApplyDoctor';
 
 const BookingPage = () => {
   const { user } = useSelector((state) => state.user);
@@ -68,22 +67,16 @@ const BookingPage = () => {
     const couponCode = couponInput.value;
     console.log(couponCode);
     if (couponCode === "hello") {
-      
       // {doctors.feesPerCunsaltation}
       if(doctors.feesPerCunsaltation>=200){
       const discount = 0.1; // 10% discount
       const discountedTotal = doctors.feesPerCunsaltation - (doctors.feesPerCunsaltation * discount);
-
-  
-      alert("Discounted Total: RS" + discountedTotal);
+      message.success("Discounted Total: RS" + discountedTotal);
       }else{
-        alert("This coupon is valid above 200 rs only");
+        message.info("This coupon is valid above 200 rs only");
       }
-      
-
-  
     } else {
-      alert("Invalid coupon code");
+      message.error("Invalid coupon code");
     }
   };
   // =============== booking func
@@ -155,23 +148,26 @@ const BookingPage = () => {
             setTime(moment(value).format('HH:mm'));
           }}
         />
-          <input style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', width: '100%' }} className="m-2 discount" type="text" id="discount_code1" name="" placeholder="Enter the discount code " ></input>
+          <input style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', width: '95%' }} className="m-2 discount" type="text" id="discount_code1" name="" placeholder="Enter the discount code " ></input>
 
               <button
+                style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }} 
                 className="btn btn-light mt-2"
                 onClick={appCou}
               >
-                apply coupon
-              </button><br></br>
+                Apply coupon
+              </button>
 
               <button
+                style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }} 
                 className="btn btn-light mt-2"
                 onClick={handleAvailability}
               >
                 Check Availability
-              </button><br></br>
+              </button>
 
-              <button className="btn btn2 btn-dark mt-2" onClick={handleBooking}>
+              <button style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }} 
+              className="btn btn2 btn-dark mt-2" onClick={handleBooking}>
                 Book Now
               </button>
             </div>

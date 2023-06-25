@@ -115,6 +115,9 @@
 .btn{
   background-color: #105053;
   color: white;
+  display: "flex";
+  justify-content: "center";
+  align-items: "center";
 }
 .btn2{
   background-color:  #2ea7a7;
@@ -157,7 +160,7 @@ label{
 }
 
   img {
-    width: 78rem;
+    width: 40rem;
     height: auto;
   }
   input{

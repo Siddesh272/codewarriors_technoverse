@@ -90,7 +90,9 @@ const Layout = ({ children }) => {
                 <Link to="/profile">{user?.name}</Link>
               </div>
             </div>
+            {/* <div style={{display:"block",align:"center"}}>
             <img src="/discount.png" alt="discount"></img>
+            </div> */}
             <div className="body">{children}</div>
           </div>
         </div>
