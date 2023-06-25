@@ -97,6 +97,18 @@ const DoctorAppointments = () => {
     <Layout>
       <h1>Appoinmtnets Lists</h1>
       <Table columns={columns} dataSource={appointments} />
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br> 
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
     </Layout>
   );
 };

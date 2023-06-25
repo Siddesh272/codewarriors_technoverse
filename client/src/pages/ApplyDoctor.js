@@ -1,6 +1,5 @@
 import React from "react";
 import Layout from "./../components/Layout";
-import "../styles/LayoutStyles.css";
 import { Col, Form, Input, Row, TimePicker, message } from "antd";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -47,7 +46,6 @@ const ApplyDoctor = () => {
   };
   return (
     <Layout>
-      <br></br>
       <h1 className="text-center">Apply Doctor</h1>
       <Form layout="vertical" onFinish={handleFinish} className="m-3">
         <h4 className="">Personal Details : </h4>
@@ -146,13 +144,12 @@ const ApplyDoctor = () => {
             </Form.Item>
           </Col>
           <Col xs={24} md={24} lg={8}></Col>
-       
-        </Row>
-        <Col xs={24} md={24} lg={8}>
-            <button style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', marginLeft:'550px' , width: '40%' }} className="btn btn2 btn-dark form-btn" type="submit">
+          <Col xs={24} md={24} lg={8}>
+            <button  className="btn2 btn-dark form-btn" type="submit">
               Submit
-            </button> <br></br><br></br>
+            </button>
           </Col>
+        </Row>
       </Form>
     </Layout>
   );
