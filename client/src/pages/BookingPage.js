@@ -66,7 +66,7 @@ const BookingPage = () => {
     const couponInput = document.getElementById("discount_code1");
     const couponCode = couponInput.value;
     console.log(couponCode);
-    if (couponCode === "hello") {
+    if (couponCode === "CODE_WARRIORS") {
       // {doctors.feesPerCunsaltation}
       if(doctors.feesPerCunsaltation>=200){
       const discount = 0.1; // 10% discount

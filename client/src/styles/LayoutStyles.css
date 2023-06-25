@@ -50,11 +50,12 @@
     background-color: white;
   }
   .logo h6 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     text-align: center;
-    margin: 20px 0px;
+    margin: 10px 0px;
     font-family: Libre Baskerville, serif;
   }
+
   .menu{
     margin-top: 100px;
     padding: 0 10px;
@@ -92,6 +93,11 @@
     color: rgb(51, 1, 1);
   }
   
+  .header img {
+    height: 4.3rem;
+    width: auto;
+  }
+
   .header-content {
     display: flex;
     align-items: center;

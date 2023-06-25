@@ -49,7 +49,7 @@ const Layout = ({ children }) => {
         <div className="layout">
           <div className="sidebar">
             <div className="logo">
-              <h6 className="text-light">Doc Connect</h6>
+              <h6 className="text-light">Doc Con</h6>
               <hr />
             </div>
             
@@ -77,7 +77,10 @@ const Layout = ({ children }) => {
           </div>
           <div className="content">
             <div className="header">
+              
+            <img src="/logo.png" alt="logo" />
               <div className="header-content" style={{ cursor: "pointer" }}>
+                
                 <Badge
                   count={user && user.notifcation.length}
                   onClick={() => {
@@ -87,7 +90,7 @@ const Layout = ({ children }) => {
                   <i class="fa-solid fa-bell"></i>
                 </Badge>
 
-                <Link to="/profile">{user?.name}</Link>
+                <Link to="/user/profile">{user?.name}</Link>
               </div>
             </div>
             {/* <div style={{display:"block",align:"center"}}>
