@@ -14,21 +14,16 @@ const UserProfile = () => {
   const [doctor, setDoctor] = useState(null);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const params = useParams();
   // update doc ==========
   //handle form
   const handleFinish = async (values) => {
     try {
       dispatch(showLoading());
       const res = await axios.post(
-        "/api/v1/doctor/updateProfile",
+        "/api/v1/user/updateProfile",
         {
           ...values,
-          userId: user._id,
-          timings: [
-            moment(values.timings[0]).format("HH:mm"),
-            moment(values.timings[1]).format("HH:mm"),
-          ],
+          _id: user._id,
         },
         {
           headers: {
@@ -52,43 +47,40 @@ const UserProfile = () => {
   // update doc ==========
 
   //getDOc Details
-  const getUserInfo = async () => {
-    try {
-      const res = await axios.post(
-        "/api/v1/user/getUserInfo",
-        { _id: params.id },
-        {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        }
-      );
-      if (res.data.success) {
-        setDoctor(res.data.data);
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // const getUserInfo = async () => {
+  //   try {
+  //     const res = await axios.post(
+  //       "/api/v1/user/getUserInfo",
+  //       { _id: params.id },
+  //       {
+  //         headers: {
+  //           Authorization: `Bearer ${localStorage.getItem("token")}`,
+  //         },
+  //       }
+  //     );
+  //     if (res.data.success) {
+  //       setDoctor(res.data.data);
+  //     }
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
-  useEffect(() => {
-    getUserInfo();
-    //eslint-disable-next-line
-  }, []);
+  // useEffect(() => {
+  //   getUserInfo();
+  //   //eslint-disable-next-line
+  // }, []);
   return (
     <Layout>
+      <br></br>
       <h1>Manage Profile</h1>
-      {!doctor && (
+      {(
         <Form
           layout="vertical"
           onFinish={handleFinish}
           className="m-3"
           initialValues={{
-            ...doctor,
-            timings: [
-              moment(doctor.timings[0], "HH:mm"),
-              moment(doctor.timings[1], "HH:mm"),
-            ],
+            ...user
           }}
         >
           <h4 className="">Personal Details : </h4>
@@ -96,9 +88,7 @@ const UserProfile = () => {
             <Col xs={24} md={24} lg={8}>
               <Form.Item
                 label="Username"
-                name="username"
-                required
-                rules={[{ required: true }]}
+                name="name"
               >
                 <Input type="text" placeholder="your username" />
               </Form.Item>
@@ -107,8 +97,6 @@ const UserProfile = () => {
               <Form.Item
                 label="Phone No"
                 name="phone"
-                required
-                rules={[{ required: true }]}
               >
                 <Input type="text" placeholder="your contact no" />
               </Form.Item>
@@ -117,8 +105,6 @@ const UserProfile = () => {
               <Form.Item
                 label="Email"
                 name="email"
-                required
-                rules={[{ required: true }]}
               >
                 <Input type="email" placeholder="your email address" />
               </Form.Item>
@@ -129,7 +115,26 @@ const UserProfile = () => {
                 Update
               </button>
             </Col>
+            <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br> 
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      
+     
         </Form>
+
       )}
     </Layout>
   );

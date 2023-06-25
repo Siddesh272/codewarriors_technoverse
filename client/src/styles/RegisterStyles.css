@@ -2,6 +2,7 @@
 body {
     background-color: #6b8484;
     font-family: Libre Baskerville, serif;
+    height: auto;
 }
 .form-container {
     display: flex;
