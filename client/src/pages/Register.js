@@ -15,7 +15,7 @@ const Register = () => {
       const res = await axios.post("/api/v1/user/register", values);
       dispatch(hideLoading());
       if (res.data.success) {
-        message.success("Register Successfully!");
+        message.success("Register Successfully! ");
         navigate("/login");
       } else {
         message.error(res.data.message);

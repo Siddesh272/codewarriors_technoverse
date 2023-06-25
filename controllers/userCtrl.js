@@ -11,7 +11,7 @@ const getUserInfoController = async (req, res) => {
     if (!user?.isDoctor) {
       res.status(200).send({
         success: true,
-        message: "user data fetch success",
+        message: "user data fetch success ",
         data: user,
       });
     }

@@ -25,7 +25,7 @@ const DoctorList = ({ doctor }) => {
             <b>Experience</b> {doctor.experience}
           </p>
           <p>
-            <b>Fees Per Consultation</b> {doctor.feesPerCunsaltation}
+            <b>Fees Per Consultation </b> {doctor.feesPerCunsaltation}
           </p>
           {/* <p>
             <b>Timings</b> {doctor.timings[0]} - {doctor.timings[1]}

@@ -67,7 +67,7 @@ const NotificationPage = () => {
   return (
     <Layout>
       <h4 className="p-3 text-center">Notification Page</h4>
-      <Tabs style={{ display: 'flex', flexDirection: 'column', marginLeft:'10px', width: '100%' }}>
+      <Tabs style={{ display: 'flex ', flexDirection: 'column', marginLeft:'10px', width: '100%' }}>
         <Tabs.TabPane tab="unRead" key={0}>
           <div  className="d-flex justify-content-end">
             <h4 className="p-2" onClick={handleMarkAllRead}>
@@ -107,6 +107,18 @@ const NotificationPage = () => {
           ))}
         </Tabs.TabPane>
       </Tabs>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br> 
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
     </Layout>
   );
 };

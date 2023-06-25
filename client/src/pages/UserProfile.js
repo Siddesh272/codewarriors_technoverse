@@ -109,13 +109,8 @@ const UserProfile = () => {
               </Form.Item>
             </Col>
           </Row>
-<<<<<<< HEAD
-          <Col xs={24} md={24} lg={8}>
-            <button className="btn btn-primary form-btn" type="submit">
-              Update
-            </button>
-          </Col>
-=======
+
+
             <Col xs={24} md={24} lg={8}>
               <button className="btn btn-primary form-btn" type="submit">
                 Update
@@ -125,9 +120,7 @@ const UserProfile = () => {
 <br></br><br></br><br></br><br></br><br></br><br></br>
       <br></br>
       <br></br>
-      
-     
->>>>>>> 475cf5a7b4890216ce29a1ff62e1fce72711dd0c
+  
         </Form>
 
       )}

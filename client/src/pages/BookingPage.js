@@ -161,7 +161,7 @@ const BookingPage = () => {
           <input style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', width: '95%' }} className="m-2 discount" type="text" id="discount_code1" name="" placeholder="Enter the discount code " ></input>
 
               <button
-                style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }} 
+                style={{ display: 'flex ', flexDirection: 'column', alignItems: 'center', width: '100%' }} 
                 className="btn btn-light mt-2"
                 onClick={appCou}
               >

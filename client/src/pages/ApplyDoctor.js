@@ -42,7 +42,7 @@ const ApplyDoctor = () => {
     } catch (error) {
       dispatch(hideLoading());
       console.log(error);
-      message.error("Somthing Went Wrrong ");
+      message.error(" Somthing Went Wrrong ");
     }
   };
   return (

@@ -79,6 +79,7 @@ const Appointments = () => {
       <br></br>
       <br></br>
       <br></br>
+      <br />
     </Layout>
   );
 };

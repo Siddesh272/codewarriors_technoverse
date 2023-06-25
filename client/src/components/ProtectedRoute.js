@@ -38,7 +38,7 @@ export default function ProtectedRoute({ children }) {
     }
   };
 
-  useEffect(() => {
+  useEffect(() =>{
     if (!user) {
       getUser();
     }
