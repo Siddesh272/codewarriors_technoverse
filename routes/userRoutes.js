@@ -12,7 +12,7 @@ const {
   bookeAppointmnetController,
   bookingAvailabilityController,
   userAppointmentsController,
-  rateController
+  rateController,
 } = require("../controllers/userCtrl");
 const authMiddleware = require("../middlewares/authMiddleware");
 
