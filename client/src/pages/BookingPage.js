@@ -142,6 +142,7 @@ const BookingPage = () => {
         Timings: {doctors.timings && doctors.timings[0]} - {doctors.timings && doctors.timings[1]}
       </h4> */}
       <div >
+        <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', width: '100%' }}>
         <DatePicker
           aria-required="true"
           style={{ margin: '0.5rem' }}
@@ -153,15 +154,16 @@ const BookingPage = () => {
         <TimePicker
           aria-required="true"
           format="HH:mm"
-          style={{ marginTop: '1rem' }}
+          style={{ margin: '0.5rem' }}
           onChange={(value) => {
             setTime(moment(value).format('HH:mm'));
           }}
         />
+        </div>
           <input style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', width: '95%' }} className="m-2 discount" type="text" id="discount_code1" name="" placeholder="Enter the discount code " ></input>
 
               <button
-                style={{ display: 'flex ', flexDirection: 'column', alignItems: 'center', width: '100%' }} 
+                style={{ display: 'flex ', flexDirection: 'column',border:'none', alignItems: 'center', width: '100%' }} 
                 className="btn btn-light mt-2"
                 onClick={appCou}
               >
@@ -169,24 +171,17 @@ const BookingPage = () => {
               </button>
 
               <button
-                style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }} 
+                style={{ display: 'flex', flexDirection: 'column',border:'none', alignItems: 'center', width: '100%' }} 
                 className="btn btn-light mt-2"
                 onClick={handleAvailability}
               >
                 Check Availability
               </button>
 
-              <button style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }} 
+              <button style={{ display: 'flex',border:'none', flexDirection: 'column', alignItems: 'center', width: '100%' }} 
               className="btn btn2 btn-dark mt-2" onClick={handleBooking}>
                 Book Now
               </button>
-              <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br> 
-     
-      
             </div>
           </div>
         )}

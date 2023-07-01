@@ -76,10 +76,10 @@ const Layout = ({ children }) => {
             </div>
           </div>
           <div className="content">
-            <div className="header">
+            <div className="header" style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
               
             <img src="/logo.png" alt="logo" />
-              <div className="header-content" style={{ cursor: "pointer" }}>
+              <div className="header-content" style={{ display: "flex", alignItems: "center" }}>
                 
                 <Badge
                   count={user && user.notifcation.length}
@@ -93,9 +93,6 @@ const Layout = ({ children }) => {
                 <Link to="/user/profile">{user?.name}</Link>
               </div>
             </div>
-            {/* <div style={{display:"block",align:"center"}}>
-            <img src="/discount.png" alt="discount"></img>
-            </div> */}
             <div className="body">{children}</div>
           </div>
         </div>

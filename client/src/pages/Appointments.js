@@ -67,19 +67,6 @@ const Appointments = () => {
       <br />
       <h1>Appointments Lists</h1>
       <Table columns={columns} dataSource={appointments} />
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br> 
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br />
     </Layout>
   );
 };

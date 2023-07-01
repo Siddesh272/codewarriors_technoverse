@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import Layout from "./../components/Layout";
 import "../styles/LayoutStyles.css";
 import axios from "axios";
@@ -116,11 +115,6 @@ const UserProfile = () => {
                 Update
               </button>
             </Col>
-            <br></br><br></br><br></br><br></br><br></br> <br></br><br></br><br></br>
-<br></br><br></br><br></br><br></br><br></br><br></br>
-      <br></br>
-      <br></br>
-  
         </Form>
 
       )}

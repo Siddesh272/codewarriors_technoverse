@@ -107,18 +107,6 @@ const NotificationPage = () => {
           ))}
         </Tabs.TabPane>
       </Tabs>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br> 
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
     </Layout>
   );
 };

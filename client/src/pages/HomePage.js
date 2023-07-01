@@ -36,19 +36,6 @@ const HomePage = () => {
       <Row>
         {doctors && doctors.map((doctor) => <DoctorList doctor={doctor} />)}
       </Row>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br> 
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
     </Layout>
   );
 };
